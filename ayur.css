@@ -1,0 +1,183 @@
+html{
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0px;
+  padding: 4px 4px;
+  background-color: rgb(255, 234, 195);
+  font-family: 'Baloo Tamma 2', cursive;
+  text-align: justify;
+}
+#heading {
+  text-align: center;
+  font-size: 5em;
+  color: rgb(54, 35, 0);
+  font-family: "Monoton", cursive;
+  letter-spacing: 15px;
+  text-shadow: .1em .1em .1em rgb(0, 172, 0);
+}
+/*--------------------------------------------------------NAVIGATION-BAR-------------------------------------------------------------*/
+.center {
+  box-shadow: -.3em -.3em .3em rgb(0, 172, 0);
+  overflow: hidden;
+  background: url(../Html/ayur/ajad.jpg) no-repeat;
+  margin-left: 1.5rem;
+  border: .2em ridge saddlebrown;
+  background-color: rgb(255, 215, 199);
+  border-radius: 40px;
+}
+.navbar{
+  margin-right: 1rem;
+}
+.navbar ul{
+  display: flex;;
+  flex-wrap: wrap;
+  align-items: inherit;
+  justify-content: space-around;
+}
+.navbar li {
+  background-color: rgb(0, 0, 0, 0.1);
+  list-style: none;
+  padding: .5rem 2.2rem;
+  margin: .5rem 1.9rem;
+  border: 3px outset rgb(22, 155, 45);
+  transition: all 1s ease-in-out 0s;
+}
+.navbar a {
+  text-decoration: none;
+  font-size: 20px;
+  padding: 5px 10px 5px 10px;
+  color: rgb(56, 35, 10);
+}
+.navbar li:hover {
+  margin: 0px 15px;
+  padding: 10px 40px;
+  background-color: rgb(147, 255, 165);
+  border: 3px outset rgb(54, 35, 0);
+  border-radius: 35px;
+  text-shadow: -1px -1px 2px rgb(172, 0, 0);
+}
+/*---------------------------------------MAIN-AREA(SECTION,ASIDE,FOOTER included)------------------------------------------------*/
+.container {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-areas:
+    "section section aside"
+    "foot foot foot";
+}
+            /*--------------------------------------------SECTION-----------------------------------------------------*/
+#section {                              /*For (About page) bcoz it looks good without grid in inside it.*/
+  grid-area: section;
+  background-color: rgb(255, 215, 199);
+  box-shadow: 8px 8px 8px black;
+  border: 2px ridge saddlebrown;
+  margin-top: 100px;
+  padding: 20px;
+}
+#section-home {                           /*For (Home page)*/
+  display: grid;
+  grid-area: section;
+  grid-template-columns: repeat(2,auto);
+  grid-gap: 1.5rem;
+  background-color: rgb(255, 215, 199);
+  box-shadow: 8px 8px 8px black;
+  border: 2px ridge saddlebrown;
+  margin-top: 100px;
+  padding: 20px;
+}
+#sec2{                                      /*For heading in (Home page) inside section*/
+  grid-column: 1 / span 2;
+  font-size: 57px;
+  text-align: center;
+  color: saddlebrown;
+  text-shadow: 4px 4px 4px rgb(0, 0, 0);
+  letter-spacing: 10px;
+}
+#p1, #p2, #p3{                                  /*The paras of (Home Page)*/
+  font-size: 1.58em;
+  /* line-height: 90px; */
+}
+#section-home img {                             /*Images of (Home page)*/
+  width: 300px;
+  height: 300px;
+  border: 5px ridge saddlebrown;
+  box-shadow: 10px 10px 10px rgb(0, 0, 0);
+  border-radius: 50%;
+}
+.abimg {                                      /*Images of (About page)*/
+  display: flex;
+  justify-content: center;
+  margin: 90px;
+}
+#heading2 {                                   /*For heading in (About page) inside section*/
+  color: #8b4513;
+  text-shadow: 4px 4px 4px rgb(0, 0, 0);
+  letter-spacing: 15px;
+  font-size: 50px;
+  text-align: center;
+  margin-bottom: 70px;
+}
+#abimg1,#abimg2 {                                  /*Specific Images of (About page)*/
+  height: 300px;
+  border: 6px ridge saddlebrown;
+  box-shadow: 10px 10px 10px rgb(0, 0, 0);
+} 
+h4{                                                 /*For various sub-headings in (About page) inside section*/
+  -webkit-text-stroke: .5px rgb(26, 11, 1);
+    letter-spacing: 3px;
+    color: rgb(156, 62, 18);
+    display: inline;
+    font-size: 30px;
+    font-weight: bold;
+    border-bottom: 1.5px ridge saddlebrown;
+}
+#para1, #para2, #para3, #para4{                         /*Content inside the section of (About page)*/
+  line-height: 60px;
+}
+.massage,.diet{
+  line-height: 40px;
+}
+            /*-----------------------------------------ASIDE----------------------------------------------------*/
+#aside {
+  background-color: rgb(173, 65, 14);
+  box-shadow: 8px 8px 8px black;
+  margin-top: 100px;
+  border: 2px ridge saddlebrown;
+  grid-area: aside;
+  background: url("ayur/55.jpg") no-repeat center center/cover;
+}
+h3{                                                   /*For Heading in aside*/
+  border-bottom: 5px ridge saddlebrown;
+  text-align: center;
+  font-size: 25px;
+}
+.link a{                                  /*For all the links in aside having class link*/
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+}
+#aside li{
+  list-style:square ;
+}
+#aside {
+  padding: 0px 20px;
+  line-height: 110px;
+}
+            /*-----------------------------------FOOTER--------------------------------------------*/
+#foot {
+  text-align: center;
+  color: rgb(54, 35, 0);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  border: 2px solid rgb(134, 51, 3);
+  background-color: rgb(255, 215, 199);
+  grid-area: foot;
+}
+h5{                                                   /*Ph nos in footer section*/
+  font-size: 20px;
+}
+#lstpra a {                                /*For footer's last line*/
+  font-variant-caps:petite-caps;
+    text-decoration: none;
+    font-size: 20px;
+    border-bottom: 7px double rgb(0, 139, 30);
+    color: rgb(124, 10, 255);
+}
